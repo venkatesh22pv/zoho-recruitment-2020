@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class SnakePattern {
+	
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("input: ");
+		int num=sc.nextInt();
+		int val=0;
+		for(int i=1;i<=num;i++)
+		{   int j=0;
+			for(j=j+i;j<num;j++)
+			{
+				System.out.print(" ");
+			}
+			for(int k=0;k<num;k++)
+			{
+				switch(i%2)
+				{
+				   case 0:
+					   System.out.print(val+" ");
+					    val=val-1;
+					    break;
+				   case 1:
+					   val=val+1;
+						System.out.print(val+" ");
+						break;
+				}			
+			}
+			val=val+4;
+			System.out.println();
+		}
+		
+	}
+
+}
